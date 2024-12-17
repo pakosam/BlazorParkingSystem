@@ -1,0 +1,67 @@
+﻿@page "/parkings"
+@inject HttpClient Http
+
+<PageTitle>Parkings</PageTitle>
+
+<h1>Parkings</h1>
+
+@if (parkings == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Parking Name</th>
+                <th>Number of Places</th>
+                <th>Opening Time</th>
+                <th>Closing Time</th>
+                <th>Price per Hour</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var parking in parkings)
+            {
+                <tr>
+                    <td>@parking.Id</td>
+                    <td>@parking.Name</td>
+                    <td>@parking.NumberOfPlaces</td>
+                    <td>@parking.OpeningTime</td>
+                    <td>@parking.ClosingTime</td>
+                    <td>@parking.PricePerHour</td>
+                    <td>
+                        <a href="./updateParking.html"><button class="update-btn">Update</button></a>
+                    </td>
+                    <td>
+                        <a href="./deleteParking.html"><button class="delete-btn">Delete</button></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Parking[]? parkings;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var p = await Http.GetFromJsonAsync<Parking[]>("https://localhost:7185/api/Parkings");
+        parkings = p;
+    }
+
+    public class Parking
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int NumberOfPlaces { get; set; }
+        public string OpeningTime { get; set; }
+        public string ClosingTime { get; set; }
+        public decimal PricePerHour { get; set; }
+    }
+}

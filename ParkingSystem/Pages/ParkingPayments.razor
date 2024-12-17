@@ -1,0 +1,61 @@
+﻿@page "/parkingEntries/{ParkingId:int}/payments"
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h3>Parking Payments</h3>
+
+@if (parkingPayments == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Amount</th>
+                <th>Parking Entry ID</th>
+                <th>Currency</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var payment in parkingPayments)
+            {
+                <tr>
+                    <td>@payment.Id</td>
+                    <td>@payment.Amount</td>
+                    <td>@payment.ParkingEntryId</td>
+                    <td>@payment.Currency.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public int ParkingId { get; set; }
+
+    private List<Payment>? parkingPayments;
+
+    protected override async Task OnInitializedAsync()
+    {
+        parkingPayments = await Http.GetFromJsonAsync<List<Payment>>($"https://localhost:7185/api/ParkingEntries/{ParkingId}/payments");
+    }
+
+    public class Payment
+    {
+        public int Id { get; set; }
+        public decimal Amount { get; set; }
+        public int ParkingEntryId { get; set; }
+        public Currency Currency { get; set; } = Currency.EUR;
+    }
+
+    public enum Currency
+    {
+        EUR,
+        USD,
+        GBP
+    }
+}

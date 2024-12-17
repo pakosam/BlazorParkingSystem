@@ -1,0 +1,88 @@
+﻿table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+tbody {
+    width: 100%;
+}
+
+tr {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+th,
+td {
+    border: 0.5px solid #ddd;
+    border-collapse: collapse;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    margin: 25px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    button.add-btn {
+        background-color: #28a745;
+        color: white;
+        align-self: center;
+    }
+
+        button.add-btn:hover {
+            background-color: #218838;
+        }
+
+    button.update-btn {
+        background-color: #007bff;
+        color: white;
+        width: 100%;
+    }
+
+        button.update-btn:hover {
+            background-color: #0056b3;
+        }
+
+    button.delete-btn {
+        background-color: #dc3545;
+        color: white;
+        width: 100%;
+    }
+
+        button.delete-btn:hover {
+            background-color: #c82333;
+        }
+
+.add-parking-entry-part {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    align-items: center;
+}
+
+.table-part {
+    flex: 9;
+}

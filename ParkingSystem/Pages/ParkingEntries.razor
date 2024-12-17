@@ -1,0 +1,64 @@
+﻿@page "/parkingEntries/{ParkingId:int}"
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h3>Parking Entries</h3>
+
+@if (parkingEntries == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Registration Plate</th>
+                <th>Ticket Takeover</th>
+                <th>Ticket Expiration</th>
+                <th>Parking ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var entry in parkingEntries)
+            {
+                <tr>
+                    <td>@entry.Id</td>
+                    <td>@entry.RegistrationPlate</td>
+                    <td>@entry.TicketTakeover</td>
+                    <td>@entry.TicketExpiration</td>
+                    <td>@entry.ParkingId</td>
+                    <td>
+                        <a href=""><button class="update-btn">Update</button></a>
+                    </td>
+                    <td>
+                        <a href=""><button class="delete-btn">Delete</button></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public int ParkingId { get; set; }
+
+    private List<ParkingEntry>? parkingEntries;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch the parking entries for the given ParkingId
+        parkingEntries = await Http.GetFromJsonAsync<List<ParkingEntry>>($"https://localhost:7185/api/ParkingEntries/{ParkingId}/entries");
+    }
+
+    public class ParkingEntry
+    {
+        public int Id { get; set; }
+        public string RegistrationPlate { get; set; }
+        public DateTime TicketTakeover { get; set; }
+        public DateTime? TicketExpiration { get; set; }
+        public int ParkingId { get; set; }
+    }
+}

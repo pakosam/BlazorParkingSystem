@@ -1,0 +1,60 @@
+﻿@page "/employees"
+@inject HttpClient Http
+
+<PageTitle>Employees</PageTitle>
+
+<h1>Employees</h1>
+
+@if (employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full name</th>
+                <th>Birth date</th>
+                <th>Parking ID</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in employees)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.FullName</td>
+                    <td>@employee.BirthDate</td>
+                    <td>@employee.ParkingId</td>
+                    <td>
+                        <a href="./updateEmployee.html"><button class="update-btn">Update</button></a>
+                    </td>
+                    <td>
+                        <a href="./deleteEmployee.html"><button class="delete-btn">Delete</button></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Employee[]? employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        employees = await Http.GetFromJsonAsync<Employee[]>("https://localhost:7185/api/Employees");
+    }
+
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public DateOnly BirthDate { get; set; }
+        public int ParkingId { get; set; }
+    }
+}
