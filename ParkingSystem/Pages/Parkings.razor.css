@@ -56,6 +56,27 @@ button.add-btn:hover {
   background-color: #218838;
 }
 
+button.entries-btn {
+  background-color: #454141 !important; 
+  color: white;
+  align-self: center;
+}
+
+button.entries-btn:hover {
+  background-color: #484242 !important; 
+}
+
+button.payments-btn {
+  background-color: #454141 !important; 
+  color: white;
+  align-self: center;
+}
+
+button.payments-btn:hover {
+  background-color: #484242 !important; 
+}
+
+
 button.update-btn {
   background-color: #007bff;
   color: white;

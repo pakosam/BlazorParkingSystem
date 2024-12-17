@@ -7,6 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\Employees.razor.css" />
+    <None Remove="Pages\ParkingEntries.razor.css" />
+    <None Remove="Pages\ParkingPayments.razor.css" />
+    <None Remove="Pages\Parkings.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Employees.razor.css" />
+    <Content Include="Pages\ParkingEntries.razor.css" />
+    <Content Include="Pages\ParkingPayments.razor.css" />
+    <Content Include="Pages\Parkings.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.11" PrivateAssets="all" />
   </ItemGroup>

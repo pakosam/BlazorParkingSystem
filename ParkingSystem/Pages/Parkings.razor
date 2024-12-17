@@ -22,6 +22,8 @@ else
                 <th>Price per Hour</th>
                 <th></th>
                 <th></th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -35,10 +37,16 @@ else
                     <td>@parking.ClosingTime</td>
                     <td>@parking.PricePerHour</td>
                     <td>
-                        <a href="./updateParking.html"><button class="update-btn">Update</button></a>
+                        <a href="/parkingEntries/@parking.Id"><button class="entries-btn">Parking entries</button></a>
                     </td>
                     <td>
-                        <a href="./deleteParking.html"><button class="delete-btn">Delete</button></a>
+                        <a href="/parkingEntries/@parking.Id/payments"><button class="payments-btn">Parking payments</button></a>
+                    </td>
+                    <td>
+                        <a href=""><button class="update-btn">Update</button></a>
+                    </td>
+                    <td>
+                        <a href=""><button class="delete-btn">Delete</button></a>
                     </td>
                 </tr>
             }

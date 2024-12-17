@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MiW4kSEePO8=",
+  "dgSpecHash": "yBWhUpO3jBQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pakos\\source\\repos\\ParkingSystem\\ParkingSystem\\ParkingSystem.csproj",
+  "projectFilePath": "C:\\Users\\pakos\\desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\ParkingSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pakos\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.11\\microsoft.aspnetcore.authorization.8.0.11.nupkg.sha512",
     "C:\\Users\\pakos\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.11\\microsoft.aspnetcore.components.8.0.11.nupkg.sha512",
