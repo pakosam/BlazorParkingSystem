@@ -2,7 +2,10 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
-<h3>Parking Entries</h3>
+<div class="add-parking-entry-part">
+    <h1>Parking entries</h1>
+    <button class="add-btn" @onclick="NavigateToAddEntry">Add new entry</button>
+</div>
 
 @if (parkingEntries == null)
 {
@@ -53,6 +56,11 @@ else
     {
         // Fetch the parking entries for the given ParkingId
         parkingEntries = await Http.GetFromJsonAsync<List<ParkingEntry>>($"https://localhost:7185/api/ParkingEntries/{ParkingId}/entries");
+    }
+
+    private void NavigateToAddEntry()
+    {
+        NavigationManager.NavigateTo($"/parkingEntries/{ParkingId}/addParkingEntry");
     }
 
     public class ParkingEntry

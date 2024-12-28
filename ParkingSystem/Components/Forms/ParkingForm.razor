@@ -1,0 +1,92 @@
+﻿@page "/add-parking"
+@inject HttpClient Http
+
+<h3>Add parking</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="name">Parking Name</label>
+        <input id="name" @bind="parkingForm.Name" placeholder="Enter parking name" required />
+    </div>
+
+    <div>
+        <label for="numOfPlaces">Number of Places</label>
+        <input id="numOfPlaces" type="number" @bind="parkingForm.NumberOfPlaces" placeholder="Enter number of places" required />
+    </div>
+
+    <div>
+        <label for="openingTime">Opening Time</label>
+        <input id="openingTime" type="time" @bind="parkingForm.OpeningTime" required />
+    </div>
+
+    <div>
+        <label for="closingTime">Closing Time</label>
+        <input id="closingTime" type="time" @bind="parkingForm.ClosingTime" required />
+    </div>
+
+    <div>
+        <label for="pricePerHour">Price per Hour</label>
+        <input id="pricePerHour" type="number" @bind="parkingForm.PricePerHour" placeholder="Enter price per hour" required />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+    private ParkingFormModel parkingForm = new ParkingFormModel();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("https://localhost:7185/api/Parkings", parkingForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Parking added successfully!";
+                parkingForm = new ParkingFormModel(); // Clear the form after success
+            }
+            else
+            {
+                errorMessage = "Failed to add parking. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class ParkingFormModel
+    {
+        public string Name { get; set; }
+        public int NumberOfPlaces { get; set; }
+        public TimeOnly OpeningTime { get; set; }
+        public TimeOnly ClosingTime { get; set; }
+        public int PricePerHour { get; set; }
+    }
+}

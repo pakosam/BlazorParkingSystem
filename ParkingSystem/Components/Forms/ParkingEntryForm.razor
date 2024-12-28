@@ -1,0 +1,89 @@
+﻿@page "/parkingEntries/{ParkingId:int}/addParkingEntry"
+@inject HttpClient Http
+
+<h3>Add Parking Entry</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="registrationPlate">Registration Plate</label>
+        <input id="registrationPlate" @bind="parkingEntryForm.RegistrationPlate" placeholder="Enter registration plate" required />
+    </div>
+
+    <div>
+        <label for="ticketTakeover">Ticket Takeover</label>
+        <input id="ticketTakeover" type="datetime-local" @bind="parkingEntryForm.TicketTakeover" required />
+    </div>
+
+    <div>
+        <label for="parkingId">Parking ID</label>
+        <input id="parkingId" type="number" @bind="parkingEntryForm.ParkingId" readonly />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+    [Parameter]
+    public int ParkingId { get; set; }
+
+    private ParkingEntryModel parkingEntryForm = new ParkingEntryModel();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    protected override void OnInitialized()
+    {
+        // Set the ParkingId from the URL into the form model
+        parkingEntryForm.ParkingId = ParkingId;
+    }
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync($"https://localhost:7185/api/ParkingEntries/{ParkingId}/entries", parkingEntryForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Parking entry added successfully!";
+                parkingEntryForm = new ParkingEntryModel { ParkingId = ParkingId }; // Reset form, but keep ParkingId
+            }
+            else
+            {
+                errorMessage = "Failed to add parking entry. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class ParkingEntryModel
+    {
+        public string RegistrationPlate { get; set; }
+        public DateTime TicketTakeover { get; set; }
+        public int ParkingId { get; set; }
+    }
+}

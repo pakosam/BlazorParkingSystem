@@ -3,7 +3,12 @@
 
 <PageTitle>Parkings</PageTitle>
 
-<h1>Parkings</h1>
+<div class="add-parking-part">
+    <h1>Parkings</h1>
+    <a href="/add-parking">
+        <button class="add-btn">Add new parking</button>
+    </a>
+</div>
 
 @if (parkings == null)
 {
@@ -37,10 +42,10 @@ else
                     <td>@parking.ClosingTime</td>
                     <td>@parking.PricePerHour</td>
                     <td>
-                        <a href="/parkingEntries/@parking.Id"><button class="entries-btn">Parking entries</button></a>
+                        <a href="/parkingEntries/@parking.Id"><button class="entries-btn">Entries</button></a>
                     </td>
                     <td>
-                        <a href="/parkingEntries/@parking.Id/payments"><button class="payments-btn">Parking payments</button></a>
+                        <a href="/parkingEntries/@parking.Id/payments"><button class="payments-btn">Payments</button></a>
                     </td>
                     <td>
                         <a href=""><button class="update-btn">Update</button></a>

@@ -98,10 +98,10 @@ button.delete-btn:hover {
 }
 
 .add-parking-part {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-  align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
 .table-part {

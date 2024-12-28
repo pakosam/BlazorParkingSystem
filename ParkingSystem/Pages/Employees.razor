@@ -1,9 +1,13 @@
 ﻿@page "/employees"
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
 
 <PageTitle>Employees</PageTitle>
 
-<h1>Employees</h1>
+<div class="add-employee-part">
+    <h1>Employees</h1>
+    <button class="add-btn" @onclick="NavigateToAddEmployee">Add new employee</button>
+</div>
 
 @if (employees == null)
 {
@@ -29,7 +33,7 @@ else
                     <td>@employee.Id</td>
                     <td>@employee.FullName</td>
                     <td>@employee.BirthDate</td>
-                    <td>@employee.ParkingId</td>
+                    <td>@employee.parkingId</td>
                     <td>
                         <a href="./updateEmployee.html"><button class="update-btn">Update</button></a>
                     </td>
@@ -43,6 +47,9 @@ else
 }
 
 @code {
+    [Parameter]
+    public int parkingId { get; set; }
+
     private Employee[]? employees;
 
     protected override async Task OnInitializedAsync()
@@ -50,11 +57,16 @@ else
         employees = await Http.GetFromJsonAsync<Employee[]>("https://localhost:7185/api/Employees");
     }
 
+    private void NavigateToAddEmployee()
+    {
+        NavigationManager.NavigateTo($"/add-employee");
+    }
+
     public class Employee
     {
         public int Id { get; set; }
         public string FullName { get; set; }
         public DateOnly BirthDate { get; set; }
-        public int ParkingId { get; set; }
+        public int parkingId { get; set; }
     }
 }

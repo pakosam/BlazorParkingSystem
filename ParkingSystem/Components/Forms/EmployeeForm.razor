@@ -1,0 +1,124 @@
+﻿@page "/add-employee"
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h3>Add employee</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" @bind="employeeForm.Name" placeholder="Enter name" required />
+    </div>
+
+    <div>
+        <label for="surname">Surname</label>
+        <input id="surname" @bind="employeeForm.Surname" placeholder="Enter surname" required />
+    </div>
+
+    <div>
+        <label for="birthdate">Birth date</label>
+        <input id="birthdate" type="date" @bind="employeeForm.BirthDate" required/>
+    </div>
+
+    <div>
+        <label for="username">Username</label>
+        <input id="username" @bind="employeeForm.Username" placeholder="Enter username" required />
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input id="password" @bind="employeeForm.Password" placeholder="Enter password" required />
+    </div>
+
+    <div>
+        <label for="parkingId">Parking ID</label>
+        <input id="parkingId" @bind="parkingId" required />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+
+    [Parameter]
+    public int parkingId { get; set; }
+
+    private EmployeeModel employeeForm = new EmployeeModel();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    protected override void OnInitialized()
+    {
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+        var query = uri.Query.TrimStart('?');
+        var queryParameters = query.Split('&', StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (var parameter in queryParameters)
+        {
+            var keyValue = parameter.Split('=', 2);
+            if (keyValue.Length == 2 && keyValue[0] == "parkingId")
+            {
+                if (int.TryParse(keyValue[1], out var parsedParkingId))
+                {
+                    parkingId = parsedParkingId;
+                }
+                break;
+            }
+        }
+        employeeForm.parkingId = parkingId;
+    }
+
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync($"https://localhost:7185/api/Employees?parkingId={parkingId}", employeeForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Employee added successfully!";
+            }
+            else
+            {
+                errorMessage = "Failed to add parking entry. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class EmployeeModel
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateOnly BirthDate { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public int parkingId { get; set; }
+    }
+}
