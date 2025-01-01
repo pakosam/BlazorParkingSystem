@@ -1,5 +1,6 @@
 ﻿@page "/parkings"
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
 
 <PageTitle>Parkings</PageTitle>
 
@@ -48,10 +49,10 @@ else
                         <a href="/parkingEntries/@parking.Id/payments"><button class="payments-btn">Payments</button></a>
                     </td>
                     <td>
-                        <a href=""><button class="update-btn">Update</button></a>
+                        <button class="update-btn" @onclick="() => NavigateToUpdateParking(parking.Id)">Update</button>
                     </td>
                     <td>
-                        <a href=""><button class="delete-btn">Delete</button></a>
+                        <a href="/delete-parking/@parking.Id"><button class="delete-btn">Delete</button></a>
                     </td>
                 </tr>
             }
@@ -66,6 +67,11 @@ else
     {
         var p = await Http.GetFromJsonAsync<Parking[]>("https://localhost:7185/api/Parkings");
         parkings = p;
+    }
+    
+    private void NavigateToUpdateParking(int id)
+    {
+        NavigationManager.NavigateTo($"/update-parking/{id}");
     }
 
     public class Parking

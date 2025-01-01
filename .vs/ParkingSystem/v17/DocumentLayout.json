@@ -3,48 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\employeeform.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\employeeform.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\employeeformupdate.razor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\employeeformupdate.razor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\employeeform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\employeeform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\employeeformadd.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\employeeformadd.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\employeeformupdate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\employeeformupdate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingform.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingform.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformadd.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformadd.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingentryform.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingentryform.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingentryformadd.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingentryformadd.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingentryform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingentryform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformupdate.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformupdate.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\pages\\employees.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\pages\\employees.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformdelete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformdelete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\pages\\parkingentries.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\pages\\parkingentries.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformupdate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformupdate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\pages\\parkings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\pages\\parkings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformdelete.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformdelete.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\pages\\parkingpayments.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\pages\\parkingpayments.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\employeeformadd.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\employeeformadd.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformadd.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformadd.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\pages\\employees.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\pages\\employees.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\pages\\employees.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\pages\\employees.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,97 +66,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 428,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ParkingEntryForm.razor.css",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor.css",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor.css",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor.css",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor.css",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-28T23:32:39.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EmployeeForm.razor.css",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeForm.razor.css",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\EmployeeForm.razor.css",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeForm.razor.css",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\EmployeeForm.razor.css",
-              "ViewState": "AgIAACsAAAAAAAAAAADwv0QAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-28T23:32:29.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ParkingForm.razor.css",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingForm.razor.css",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingForm.razor.css",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingForm.razor.css",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingForm.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-28T23:32:27.064Z",
+              "Title": "EmployeeFormUpdate.razor.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor.razor",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-01T13:16:40.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ParkingForm.razor",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingForm.razor",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingForm.razor",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingForm.razor",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingForm.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAABOAAAAAAAAAA==",
+              "Title": "EmployeeFormUpdate.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\EmployeeFormUpdate.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T00:29:39.809Z",
+              "WhenOpened": "2025-01-01T13:15:09.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ParkingEntryFormAdd.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingEntryFormAdd.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingEntryFormAdd.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingEntryFormAdd.razor",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingEntryFormAdd.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-31T00:37:22.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ParkingEntryForm.razor",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingEntryForm.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Title": "ParkingFormUpdate.razor.css",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-31T00:18:24.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ParkingFormAdd.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T00:16:25.408Z",
+              "WhenOpened": "2024-12-30T23:52:03.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmployeeForm.razor",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeForm.razor",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\EmployeeForm.razor",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeForm.razor",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\EmployeeForm.razor",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAACkAAAAuAAAAAAAAAA==",
+              "Title": "EmployeeFormAdd.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T00:15:20.065Z",
+              "WhenOpened": "2024-12-30T23:53:11.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Program.cs",
-              "RelativeDocumentMoniker": "ParkingSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Program.cs",
-              "RelativeToolTip": "ParkingSystem\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T22:19:40.942Z",
+              "DocumentIndex": 6,
+              "Title": "ParkingFormDelete.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T23:55:05.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ParkingFormUpdate.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-28T23:53:37.658Z",
               "EditorCaption": ""
             },
             {
@@ -155,48 +180,74 @@
               "RelativeDocumentMoniker": "ParkingSystem\\Pages\\Parkings.razor",
               "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Parkings.razor",
               "RelativeToolTip": "ParkingSystem\\Pages\\Parkings.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T00:15:40.793Z",
+              "WhenOpened": "2024-12-30T17:44:47.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ParkingEntries.razor",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\ParkingEntries.razor",
-              "RelativeDocumentMoniker": "ParkingSystem\\Pages\\ParkingEntries.razor",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\ParkingEntries.razor",
-              "RelativeToolTip": "ParkingSystem\\Pages\\ParkingEntries.razor",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T00:15:32.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Employees.razor",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Employees.razor",
-              "RelativeDocumentMoniker": "ParkingSystem\\Pages\\Employees.razor",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Employees.razor",
-              "RelativeToolTip": "ParkingSystem\\Pages\\Employees.razor",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T00:15:27.153Z",
+              "DocumentIndex": 9,
+              "Title": "ParkingFormDelete.razor.css",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-31T00:18:31.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ParkingPayments.razor",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\ParkingPayments.razor",
-              "RelativeDocumentMoniker": "ParkingSystem\\Pages\\ParkingPayments.razor",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\ParkingPayments.razor",
-              "RelativeToolTip": "ParkingSystem\\Pages\\ParkingPayments.razor",
+              "Title": "EmployeeFormAdd.razor.css",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor.css",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor.css",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor.css",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\EmployeeFormAdd.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-31T00:19:23.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ParkingFormAdd.razor.css",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor.css",
+              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor.css",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor.css",
+              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormAdd.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-31T00:18:34.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Employees.razor",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Employees.razor",
+              "RelativeDocumentMoniker": "ParkingSystem\\Pages\\Employees.razor",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Employees.razor",
+              "RelativeToolTip": "ParkingSystem\\Pages\\Employees.razor",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T00:15:37.736Z",
+              "WhenOpened": "2024-12-30T17:21:40.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Employees.razor.css",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Employees.razor.css",
+              "RelativeDocumentMoniker": "ParkingSystem\\Pages\\Employees.razor.css",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Employees.razor.css",
+              "RelativeToolTip": "ParkingSystem\\Pages\\Employees.razor.css",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T17:21:38.422Z",
               "EditorCaption": ""
             }
           ]

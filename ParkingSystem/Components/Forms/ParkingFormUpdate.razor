@@ -1,0 +1,134 @@
+﻿@page "/update-parking/{Id:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h3>Update parking</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="id">ID</label>
+        <input id="id" @bind="parkingForm.Id" readonly />
+    </div>
+
+    <div>
+        <label for="name">Parking Name</label>
+        <input id="name" @bind="parkingForm.Name" required />
+    </div>
+
+    <div>
+        <label for="numOfPlaces">Number of Places</label>
+        <input id="numOfPlaces" type="number" @bind="parkingForm.NumberOfPlaces" required />
+    </div>
+
+    <div>
+        <label for="openingTime">Opening Time</label>
+        <input id="openingTime" type="time" @bind="parkingForm.OpeningTime" required />
+    </div>
+
+    <div>
+        <label for="closingTime">Closing Time</label>
+        <input id="closingTime" type="time" @bind="parkingForm.ClosingTime" required />
+    </div>
+
+    <div>
+        <label for="pricePerHour">Price per Hour</label>
+        <input id="pricePerHour" type="number" @bind="parkingForm.PricePerHour" required />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private ParkingFormModel parkingForm = new ParkingFormModel();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+       await LoadParkingDetails();
+    }
+
+    private async Task LoadParkingDetails()
+    {
+        try
+        {
+            successMessage = null;
+            errorMessage = null;
+
+            // Clear the form before fetching new data
+            parkingForm = new ParkingFormModel();
+
+            var response = await Http.GetFromJsonAsync<ParkingFormModel>($"https://localhost:7185/api/Parkings/{Id}");
+
+            if (response != null)
+            {
+                parkingForm = response; // Populate the form with the fetched data
+            }
+            else
+            {
+                errorMessage = "Parking not found!";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await Http.PutAsJsonAsync("https://localhost:7185/api/Parkings", parkingForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Parking updated successfully!";
+                parkingForm = new ParkingFormModel();
+            }
+            else
+            {
+                errorMessage = "Failed to update parking. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class ParkingFormModel
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int NumberOfPlaces { get; set; }
+        public TimeOnly OpeningTime { get; set; }
+        public TimeOnly ClosingTime { get; set; }
+        public int PricePerHour { get; set; }
+    }
+}

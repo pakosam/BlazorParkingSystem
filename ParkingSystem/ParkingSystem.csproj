@@ -10,6 +10,8 @@
     <None Remove="Components\Forms\EmployeeForm.razor.css" />
     <None Remove="Components\Forms\ParkingEntryForm.razor.css" />
     <None Remove="Components\Forms\ParkingForm.razor.css" />
+    <None Remove="Components\Forms\ParkingFormDelete.razor.css" />
+    <None Remove="Components\Forms\ParkingFormUpdate.razor.css" />
     <None Remove="Pages\Employees.razor.css" />
     <None Remove="Pages\ParkingEntries.razor.css" />
     <None Remove="Pages\ParkingPayments.razor.css" />
@@ -20,6 +22,8 @@
     <Content Include="Components\Forms\EmployeeForm.razor.css" />
     <Content Include="Components\Forms\ParkingEntryForm.razor.css" />
     <Content Include="Components\Forms\ParkingForm.razor.css" />
+    <Content Include="Components\Forms\ParkingFormDelete.razor.css" />
+    <Content Include="Components\Forms\ParkingFormUpdate.razor.css" />
     <Content Include="Pages\Employees.razor.css" />
     <Content Include="Pages\ParkingEntries.razor.css" />
     <Content Include="Pages\ParkingPayments.razor.css" />

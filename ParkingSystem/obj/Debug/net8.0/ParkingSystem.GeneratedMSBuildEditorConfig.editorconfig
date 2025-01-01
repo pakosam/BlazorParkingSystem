@@ -42,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope = b-dayhw60d54
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xQYXJraW5nRm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-jp3qnb2tyc
 
+[C:/Users/pakos/Desktop/ProgrammingInC/ProjektZaPIN/BlazorParkingSystem/ParkingSystem/Components/Forms/ParkingFormDelete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xQYXJraW5nRm9ybURlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-gx8asz2p04
+
+[C:/Users/pakos/Desktop/ProgrammingInC/ProjektZaPIN/BlazorParkingSystem/ParkingSystem/Components/Forms/ParkingFormUpdate.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3Jtc1xQYXJraW5nRm9ybVVwZGF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-khagnfpxpu
+
 [C:/Users/pakos/Desktop/ProgrammingInC/ProjektZaPIN/BlazorParkingSystem/ParkingSystem/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3mq0lewf61
