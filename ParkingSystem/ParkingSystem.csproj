@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="Components\Forms\EmployeeForm.razor.css" />
+    <None Remove="Components\Forms\EmployeeFormDelete.razor.css" />
+    <None Remove="Components\Forms\EmployeeFormUpdate.razor.css" />
     <None Remove="Components\Forms\ParkingEntryForm.razor.css" />
     <None Remove="Components\Forms\ParkingForm.razor.css" />
     <None Remove="Components\Forms\ParkingFormDelete.razor.css" />
@@ -20,6 +22,8 @@
 
   <ItemGroup>
     <Content Include="Components\Forms\EmployeeForm.razor.css" />
+    <Content Include="Components\Forms\EmployeeFormDelete.razor.css" />
+    <Content Include="Components\Forms\EmployeeFormUpdate.razor.css" />
     <Content Include="Components\Forms\ParkingEntryForm.razor.css" />
     <Content Include="Components\Forms\ParkingForm.razor.css" />
     <Content Include="Components\Forms\ParkingFormDelete.razor.css" />

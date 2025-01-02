@@ -1,0 +1,165 @@
+﻿@page "/update-employee/{Id:int}"
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h3>Update employee</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="id">ID</label>
+        <input id="id" @bind="employeeForm.Id" readonly />
+    </div>
+
+    <div>
+        <label for="name">Name</label>
+        <input id="name" @bind="employeeForm.Name" required />
+    </div>
+
+    <div>
+        <label for="surname">Surname</label>
+        <input id="surname" @bind="employeeForm.Surname" required />
+    </div>
+
+    <div>
+        <label for="birthdate">Birth date</label>
+        <input id="birthdate" type="date" @bind="employeeForm.BirthDate" required />
+    </div>
+
+    <div>
+        <label for="username">Username</label>
+        <input id="username" @bind="employeeForm.Username" required />
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input id="password" @bind="employeeForm.Password" required />
+    </div>
+
+    <div>
+        <label for="parkingId">Parking ID</label>
+        <input id="parkingId" @bind="employeeForm.parkingId" required />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+
+    [Parameter]
+    public int parkingId { get; set; }
+
+    [Parameter]
+    public int Id { get; set; }
+
+    private EmployeeModel employeeForm = new EmployeeModel();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    protected override void OnInitialized()
+    {
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+        var query = uri.Query.TrimStart('?');
+        var queryParameters = query.Split('&', StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (var parameter in queryParameters)
+        {
+            var keyValue = parameter.Split('=', 2);
+            if (keyValue.Length == 2 && keyValue[0] == "parkingId")
+            {
+                if (int.TryParse(keyValue[1], out var parsedParkingId))
+                {
+                    parkingId = parsedParkingId;
+                }
+                break;
+            }
+        }
+        employeeForm.parkingId = parkingId;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadEmployeeDetails();
+    }
+
+    private async Task LoadEmployeeDetails()
+    {
+        try
+        {
+            successMessage = null;
+            errorMessage = null;
+
+            // Clear the form before fetching new data
+            employeeForm = new EmployeeModel();
+
+            var response = await Http.GetFromJsonAsync<EmployeeModel>($"https://localhost:7185/api/Employees/{Id}");
+
+            if (response != null)
+            {
+                employeeForm = response; // Populate the form with the fetched data
+            }
+            else
+            {
+                errorMessage = "Employee not found!";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            employeeForm.parkingId = parkingId;
+            var response = await Http.PutAsJsonAsync($"https://localhost:7185/api/Employees?parkingId={parkingId}", employeeForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Employee updated successfully!";
+            }
+            else
+            {
+                errorMessage = "Failed to update employee. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class EmployeeModel
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateOnly BirthDate { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public int parkingId { get; set; }
+    }
+}
