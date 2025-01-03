@@ -39,16 +39,6 @@ else if (errorMessage != null)
     </div>
 
     <div>
-        <label for="username">Username</label>
-        <input id="username" @bind="employeeForm.Username" required />
-    </div>
-
-    <div>
-        <label for="password">Password</label>
-        <input id="password" @bind="employeeForm.Password" required />
-    </div>
-
-    <div>
         <label for="parkingId">Parking ID</label>
         <input id="parkingId" @bind="employeeForm.parkingId" required />
     </div>
@@ -62,7 +52,7 @@ else if (errorMessage != null)
     public int parkingId { get; set; }
 
     [Parameter]
-    public int Id { get; set; }
+    public int id { get; set; }
 
     private EmployeeModel employeeForm = new EmployeeModel();
     private bool isSubmitting = false;
@@ -103,13 +93,14 @@ else if (errorMessage != null)
             errorMessage = null;
 
             // Clear the form before fetching new data
-            employeeForm = new EmployeeModel();
+            // employeeForm = new EmployeeModel();
 
-            var response = await Http.GetFromJsonAsync<EmployeeModel>($"https://localhost:7185/api/Employees/{Id}");
+            var response = await Http.GetFromJsonAsync<EmployeeModel>($"https://localhost:7185/api/Employees/{id}");
 
             if (response != null)
             {
                 employeeForm = response; // Populate the form with the fetched data
+                Console.WriteLine($"Loaded employee with parkingId: {employeeForm.parkingId}");
             }
             else
             {
@@ -130,8 +121,7 @@ else if (errorMessage != null)
 
         try
         {
-            employeeForm.parkingId = parkingId;
-            var response = await Http.PutAsJsonAsync($"https://localhost:7185/api/Employees?parkingId={parkingId}", employeeForm);
+            var response = await Http.PutAsJsonAsync($"https://localhost:7185/api/Employees?parkingId={employeeForm.parkingId}", employeeForm);
 
             if (response.IsSuccessStatusCode)
             {
@@ -158,8 +148,6 @@ else if (errorMessage != null)
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateOnly BirthDate { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
         public int parkingId { get; set; }
     }
 }
