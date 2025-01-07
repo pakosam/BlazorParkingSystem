@@ -1,0 +1,89 @@
+﻿@page "/updateParkingLeave/{id:int}"
+@inject HttpClient Http
+
+<h3>Update parking leave</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="ticketExpiration">Ticket expiration</label>
+        <input id="ticketExpiration" type="datetime-local" @bind="parkingLeaveForm.TicketExpiration" required />
+    </div>
+
+    <div>
+        <label for="parkingEntryId">Parking entry ID</label>
+        <input id="parkingEntryId" type="number" @bind="parkingLeaveForm.ParkingEntryId" readonly />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+    [Parameter]
+    public int ParkingEntryId { get; set; }
+
+    [Parameter]
+    public int ParkingId { get; set; }
+
+    [Parameter]
+    public int Id { get; set; }
+
+    private ParkingLeaveModel parkingLeaveForm = new ParkingLeaveModel();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    protected override void OnInitialized()
+    {
+        parkingLeaveForm.ParkingEntryId = Id;
+    }
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            Console.WriteLine($"Sending data: ParkingEntryId = {parkingLeaveForm.ParkingEntryId}, TicketExpiration = {parkingLeaveForm.TicketExpiration}");
+            var response = await Http.PutAsJsonAsync($"https://localhost:7185/api/ParkingEntries/{parkingLeaveForm.ParkingEntryId}/leaves", parkingLeaveForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Parking entry added successfully!";
+                parkingLeaveForm = new ParkingLeaveModel { ParkingEntryId = ParkingEntryId }; // Reset form, but keep ParkingId
+            }
+            else
+            {
+                errorMessage = "Failed to add parking entry. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class ParkingLeaveModel
+    {
+        public DateTime TicketExpiration { get; set; }
+        public int ParkingEntryId { get; set; }
+    }
+}

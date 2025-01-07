@@ -6,7 +6,6 @@
 
 <div class="add-employee-part">
     <h1>Employees</h1>
-    <button class="add-btn" @onclick="NavigateToAddEmployee">Add new employee</button>
 </div>
 
 @if (employees == null)
@@ -15,35 +14,41 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Full name</th>
-                <th>Birth date</th>
-                <th>Parking ID</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var employee in employees)
-            {
+    <div class="add-button">
+        <button class="add-btn" @onclick="NavigateToAddEmployee">Add new employee</button>
+    </div>
+
+    <div>
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@employee.Id</td>
-                    <td>@employee.FullName</td>
-                    <td>@employee.BirthDate</td>
-                    <td>@employee.parkingId</td>
-                    <td>
-                        <a href="/update-employee/@employee.Id"><button class="update-btn">Update</button></a>
-                    </td>
-                    <td>
-                        <a href="/delete-employee/@employee.Id"><button class="delete-btn">Delete</button></a>
-                    </td>
+                    <th>ID</th>
+                    <th>Full name</th>
+                    <th>Birth date</th>
+                    <th>Parking ID</th>
+                    <th></th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var employee in employees)
+                {
+                    <tr>
+                        <td>@employee.Id</td>
+                        <td>@employee.FullName</td>
+                        <td>@employee.BirthDate</td>
+                        <td>@employee.parkingId</td>
+                        <td>
+                            <a href="/update-employee/@employee.Id"><button class="update-btn">Update</button></a>
+                        </td>
+                        <td>
+                            <a href="/delete-employee/@employee.Id"><button class="delete-btn">Delete</button></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 
 @code {

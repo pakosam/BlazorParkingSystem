@@ -1,0 +1,93 @@
+﻿@page "/deleteParkingLeave/{Id:int}"
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h3>Delete parking leave</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="id">ID</label>
+        <input id="id" @bind="deletedLeave.Id" readonly />
+    </div>
+
+    <button type="submit">Delete</button>
+</form>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private DeleteLeave deletedLeave = new DeleteLeave();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    protected override void OnInitialized()
+    {
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+        var query = uri.Query.TrimStart('?');
+        var queryParameters = query.Split('&', StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (var parameter in queryParameters)
+        {
+            var keyValue = parameter.Split('=', 2);
+            if (keyValue.Length == 2 && keyValue[0] == "parkingId")
+            {
+                if (int.TryParse(keyValue[1], out var parsedId))
+                {
+                    Id = parsedId;
+                }
+                break;
+            }
+        }
+        deletedLeave.Id = Id;
+    }
+
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await Http.DeleteAsync($"https://localhost:7185/api/ParkingEntries?id={Id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Entry/leave deleted successfully!";
+            }
+            else
+            {
+                errorMessage = "Failed to delete entry/leave. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class DeleteLeave
+    {
+        public int Id { get; set; }
+    }
+}

@@ -77,10 +77,13 @@ button.delete-btn:hover {
 }
 
 .add-employee-part {
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-  align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+}
+
+.add-button {
+    text-align-last: right;
 }
 
 .table-part {

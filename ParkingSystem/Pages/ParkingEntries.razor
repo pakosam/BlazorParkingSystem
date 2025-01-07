@@ -2,9 +2,10 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 
+<PageTitle>Parking entries</PageTitle>
+
 <div class="add-parking-entry-part">
     <h1>Parking entries</h1>
-    <button class="add-btn" @onclick="NavigateToAddEntry">Add new entry</button>
 </div>
 
 @if (parkingEntries == null)
@@ -13,37 +14,42 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Registration Plate</th>
-                <th>Ticket Takeover</th>
-                <th>Ticket Expiration</th>
-                <th>Parking ID</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var entry in parkingEntries)
-            {
+    <div class="add-button">
+        <button class="add-btn" @onclick="NavigateToAddEntry">Add new entry</button>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@entry.Id</td>
-                    <td>@entry.RegistrationPlate</td>
-                    <td>@entry.TicketTakeover</td>
-                    <td>@entry.TicketExpiration</td>
-                    <td>@entry.ParkingId</td>
-                    <td>
-                        <a href=""><button class="update-btn">Update</button></a>
-                    </td>
-                    <td>
-                        <a href=""><button class="delete-btn">Delete</button></a>
-                    </td>
+                    <th>ID</th>
+                    <th>Registration Plate</th>
+                    <th>Ticket Takeover</th>
+                    <th>Ticket Expiration</th>
+                    <th>Parking ID</th>
+                    <th></th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var entry in parkingEntries)
+                {
+                    <tr>
+                        <td>@entry.Id</td>
+                        <td>@entry.RegistrationPlate</td>
+                        <td>@entry.TicketTakeover</td>
+                        <td>@entry.TicketExpiration</td>
+                        <td>@entry.ParkingId</td>
+                        <td>
+                            <button class="update-btn" @onclick="() => NavigateToUpdateLeave(entry.Id)">Update</button>
+                        </td>
+                        <td>
+                            <button class="delete-btn" @onclick="() => NavigateToDeleteLeave(entry.Id)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 
 @code {
@@ -61,6 +67,16 @@ else
     private void NavigateToAddEntry()
     {
         NavigationManager.NavigateTo($"/parkingEntries/{ParkingId}/addParkingEntry");
+    }
+
+    private void NavigateToUpdateLeave(int id)
+    {
+        NavigationManager.NavigateTo($"/updateParkingLeave/{id}");
+    }
+
+    private void NavigateToDeleteLeave(int id)
+    {
+        NavigationManager.NavigateTo($"/deleteParkingLeave/{id}");
     }
 
     public class ParkingEntry

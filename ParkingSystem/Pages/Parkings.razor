@@ -6,9 +6,6 @@
 
 <div class="add-parking-part">
     <h1>Parkings</h1>
-    <a href="/add-parking">
-        <button class="add-btn">Add new parking</button>
-    </a>
 </div>
 
 @if (parkings == null)
@@ -17,6 +14,11 @@
 }
 else
 {
+    <div class="add-button">
+        <a href="/add-parking">
+            <button class="add-btn">Add new parking</button>
+        </a>
+    </div>
     <table class="table">
         <thead>
             <tr>
