@@ -1,0 +1,93 @@
+﻿@page "/registration"
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h3>Registration</h3>
+
+@if (isSubmitting)
+{
+    <p>Submitting...</p>
+}
+else if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<form @onsubmit="SubmitForm">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" @bind="registrationForm.Name" placeholder="Enter name" required />
+    </div>
+
+    <div>
+        <label for="surname">Surname</label>
+        <input id="surname" @bind="registrationForm.Surname" placeholder="Enter surname" required />
+    </div>
+
+    <div>
+        <label for="birthdate">Birth date</label>
+        <input id="birthdate" type="date" @bind="registrationForm.BirthDate" required />
+    </div>
+
+    <div>
+        <label for="username">Username</label>
+        <input id="username" @bind="registrationForm.Username" placeholder="Enter username" required />
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input id="password" @bind="registrationForm.Password" placeholder="Enter password" required />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@code {
+
+    private RegistrationModel registrationForm = new RegistrationModel();
+    private bool isSubmitting = false;
+    private string? successMessage;
+    private string? errorMessage;
+
+    private async Task SubmitForm()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync($"https://localhost:7185/api/Authorizations/register", registrationForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Registration successful!";
+            }
+            else
+            {
+                errorMessage = "Failed to register. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class RegistrationModel
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateOnly BirthDate { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+}

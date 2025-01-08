@@ -104,6 +104,10 @@ button.delete-btn:hover {
     align-items: center !important;
 }
 
+.add-button {
+    text-align-last: right;
+}
+
 .table-part {
   flex: 9;
 }

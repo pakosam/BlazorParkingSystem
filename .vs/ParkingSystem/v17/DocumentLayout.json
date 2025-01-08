@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformdelete.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformdelete.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingformupdate.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingformupdate.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingleaveformdelete.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingleaveformdelete.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\components\\forms\\parkingleaveformupdate.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\components\\forms\\parkingleaveformupdate.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\parkingsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\parkingsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|c:\\users\\pakos\\desktop\\programminginc\\projektzapin\\blazorparkingsystem\\parkingsystem\\pages\\login.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6C26DCEF-E5A0-4F7E-AB1C-AEADD30CE91A}|ParkingSystem\\ParkingSystem.csproj|solutionrelative:parkingsystem\\pages\\login.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,66 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ParkingFormDelete.razor.css",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormDelete.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Login.razor.css",
+              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Login.razor.css",
+              "RelativeDocumentMoniker": "ParkingSystem\\Pages\\Login.razor.css",
+              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Pages\\Login.razor.css",
+              "RelativeToolTip": "ParkingSystem\\Pages\\Login.razor.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-06T16:59:34.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ParkingFormUpdate.razor.css",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingFormUpdate.razor.css",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-06T16:59:32.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ParkingLeaveFormDelete.razor.css",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingLeaveFormDelete.razor.css",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingLeaveFormDelete.razor.css",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingLeaveFormDelete.razor.css",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingLeaveFormDelete.razor.css",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-06T16:59:29.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ParkingLeaveFormUpdate.razor.css",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingLeaveFormUpdate.razor.css",
-              "RelativeDocumentMoniker": "ParkingSystem\\Components\\Forms\\ParkingLeaveFormUpdate.razor.css",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\Components\\Forms\\ParkingLeaveFormUpdate.razor.css",
-              "RelativeToolTip": "ParkingSystem\\Components\\Forms\\ParkingLeaveFormUpdate.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-06T16:59:27.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ParkingSystem",
-              "DocumentMoniker": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\ParkingSystem.csproj",
-              "RelativeDocumentMoniker": "ParkingSystem\\ParkingSystem.csproj",
-              "ToolTip": "C:\\Users\\pakos\\Desktop\\ProgrammingInC\\ProjektZaPIN\\BlazorParkingSystem\\ParkingSystem\\ParkingSystem.csproj",
-              "RelativeToolTip": "ParkingSystem\\ParkingSystem.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-06T16:58:05.96Z",
+              "WhenOpened": "2025-01-08T15:51:05Z",
               "EditorCaption": ""
             }
           ]

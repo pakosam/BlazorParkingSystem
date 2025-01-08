@@ -18,9 +18,11 @@
     <None Remove="Components\Forms\ParkingLeaveFormDelete.razor.css" />
     <None Remove="Components\Forms\ParkingLeaveFormUpdate.razor.css" />
     <None Remove="Pages\Employees.razor.css" />
+    <None Remove="Pages\Login.razor.css" />
     <None Remove="Pages\ParkingEntries.razor.css" />
     <None Remove="Pages\ParkingPayments.razor.css" />
     <None Remove="Pages\Parkings.razor.css" />
+    <None Remove="Pages\Registration.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,9 +36,11 @@
     <Content Include="Components\Forms\ParkingLeaveFormDelete.razor.css" />
     <Content Include="Components\Forms\ParkingLeaveFormUpdate.razor.css" />
     <Content Include="Pages\Employees.razor.css" />
+    <Content Include="Pages\Login.razor.css" />
     <Content Include="Pages\ParkingEntries.razor.css" />
     <Content Include="Pages\ParkingPayments.razor.css" />
     <Content Include="Pages\Parkings.razor.css" />
+    <Content Include="Pages\Registration.razor.css" />
   </ItemGroup>
 
   <ItemGroup>

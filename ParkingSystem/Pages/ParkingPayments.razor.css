@@ -1,5 +1,32 @@
-﻿<h3>ParkingPayments.razor</h3>
+﻿table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
 
-@code {
+tbody {
+    width: 100%;
+}
 
+tr {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+th,
+td {
+    border: 0.5px solid #ddd;
+    border-collapse: collapse;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
 }

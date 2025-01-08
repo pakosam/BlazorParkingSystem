@@ -78,6 +78,10 @@ build_metadata.AdditionalFiles.CssScope = b-y6a2j6xt0t
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-id1gdsq2hi
 
+[C:/Users/pakos/Desktop/ProgrammingInC/ProjektZaPIN/BlazorParkingSystem/ParkingSystem/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5pgs5h83rw
+
 [C:/Users/pakos/Desktop/ProgrammingInC/ProjektZaPIN/BlazorParkingSystem/ParkingSystem/Pages/ParkingEntries.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFya2luZ0VudHJpZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-x01aly9u72
@@ -89,3 +93,7 @@ build_metadata.AdditionalFiles.CssScope = b-sr2m8macq9
 [C:/Users/pakos/Desktop/ProgrammingInC/ProjektZaPIN/BlazorParkingSystem/ParkingSystem/Pages/Parkings.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFya2luZ3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-2uzdx0oivg
+
+[C:/Users/pakos/Desktop/ProgrammingInC/ProjektZaPIN/BlazorParkingSystem/ParkingSystem/Pages/Registration.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cmF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-awe3716ihb
