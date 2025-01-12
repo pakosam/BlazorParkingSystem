@@ -1,6 +1,8 @@
 ﻿@page "/parkingEntries/{ParkingId:int}"
+@using ParkingSystem.Services
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
+@inject ApiService ApiService
 
 <PageTitle>Parking entries</PageTitle>
 
@@ -60,8 +62,13 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        var response = await ApiService.MakeRequestAsync($"https://localhost:7185/api/ParkingEntries/{ParkingId}/entries", HttpMethod.Get);
+        if (response.IsSuccessStatusCode)
+        {
+            parkingEntries = await response.Content.ReadFromJsonAsync<List<ParkingEntry>>();
+        }
         // Fetch the parking entries for the given ParkingId
-        parkingEntries = await Http.GetFromJsonAsync<List<ParkingEntry>>($"https://localhost:7185/api/ParkingEntries/{ParkingId}/entries");
+        // parkingEntries = await Http.GetFromJsonAsync<List<ParkingEntry>>($"https://localhost:7185/api/ParkingEntries/{ParkingId}/entries");
     }
 
     private void NavigateToAddEntry()

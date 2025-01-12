@@ -1,6 +1,10 @@
 ﻿@page "/parkings"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
+@using ParkingSystem.Services
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
+@inject ApiService ApiService
 
 <PageTitle>Parkings</PageTitle>
 
@@ -67,8 +71,12 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        var p = await Http.GetFromJsonAsync<Parking[]>("https://localhost:7185/api/Parkings");
-        parkings = p;
+        var response = await ApiService.MakeRequestAsync("https://localhost:7185/api/Parkings", HttpMethod.Get);
+        if (response.IsSuccessStatusCode)
+        {
+            parkings = await response.Content.ReadFromJsonAsync<Parking[]>();
+        }
+        // parkings = await Http.GetFromJsonAsync<Parking[]>("https://localhost:7185/api/Parkings");
     }
     
     private void NavigateToUpdateParking(int id)

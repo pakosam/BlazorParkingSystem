@@ -1,6 +1,8 @@
 ﻿@page "/add-employee"
+@using ParkingSystem.Services;
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
+@inject ApiService ApiService;
 
 <h3>Add employee</h3>
 
@@ -82,7 +84,6 @@ else if (errorMessage != null)
         employeeForm.parkingId = parkingId;
     }
 
-
     private async Task SubmitForm()
     {
         isSubmitting = true;
@@ -91,15 +92,23 @@ else if (errorMessage != null)
 
         try
         {
-            var response = await Http.PostAsJsonAsync($"https://localhost:7185/api/Employees?parkingId={parkingId}", employeeForm);
+            // Prepare the API request using ApiService
+            var response = await ApiService.MakeRequestAsync(
+                $"https://localhost:7185/api/Employees?parkingId={parkingId}",
+                HttpMethod.Post,
+                employeeForm // Pass the employeeForm as content
+            );
 
             if (response.IsSuccessStatusCode)
             {
                 successMessage = "Employee added successfully!";
+                employeeForm = new EmployeeModel();
+                parkingId = 0;
             }
             else
             {
-                errorMessage = "Failed to add parking entry. Please try again.";
+                var errorResponse = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Failed to add employee. Error: {errorResponse}";
             }
         }
         catch (Exception ex)

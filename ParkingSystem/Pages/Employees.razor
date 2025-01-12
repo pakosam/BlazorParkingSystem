@@ -1,6 +1,9 @@
 ﻿@page "/employees"
+@using ParkingSystem.Services;
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
+@inject ApiService ApiService;
+@inject IHttpClientFactory HttpClientFactory
 
 <PageTitle>Employees</PageTitle>
 
@@ -57,9 +60,16 @@ else
 
     private Employee[]? employees;
 
+    private HttpClient AuthorizedHttpClient => HttpClientFactory.CreateClient("AuthorizedClient");
+
     protected override async Task OnInitializedAsync()
     {
-        employees = await Http.GetFromJsonAsync<Employee[]>("https://localhost:7185/api/Employees");
+        var response = await ApiService.MakeRequestAsync("https://localhost:7185/api/Employees", HttpMethod.Get);
+        if (response.IsSuccessStatusCode)
+        {
+            employees = await response.Content.ReadFromJsonAsync<Employee[]>();
+        }
+        // employees = await Http.GetFromJsonAsync<Employee[]>("https:localhost:7185/api/Employees");
     }
 
     private void NavigateToAddEmployee()
