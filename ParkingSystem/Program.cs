@@ -17,7 +17,7 @@ builder.Services.AddScoped<CustomAuthorizationMessageHandler>();
 
 builder.Services.AddHttpClient("AuthorizedClient", client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7185/api/"); // Base URL for your API
+    client.BaseAddress = new Uri("https://localhost:7185/api/");
 }).AddHttpMessageHandler<CustomAuthorizationMessageHandler>();
 
 await builder.Build().RunAsync();

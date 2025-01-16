@@ -1,28 +1,20 @@
 ﻿@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 @inject AuthStateService AuthState
+@inject NavigationManager NavigationManager
+
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">ParkingSystem</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+        <button title="Navigation menu" class="navbar-toggler">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<div class="nav-scrollable">
     <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="registration">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Registration
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="login">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Login
-            </NavLink>
-        </div>
-        @if (IsLoggedIn)
+        @if (isLoggedIn)
         {
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="parkings">
@@ -40,60 +32,51 @@
                 </NavLink>
             </div>
         }
+        else
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="registration">
+                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Registration
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="login">
+                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Login
+                </NavLink>
+            </div>
+        }
     </nav>
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private bool IsLoggedIn { get; set; }
+    private bool isLoggedIn { get; set; }
+    private Action? _authStateChangeHandler;
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+
 
     protected override async Task OnInitializedAsync()
     {
-        Console.WriteLine("OnInitializedAsync: sudebar");
-
-        AuthState.OnChange += HandleAuthStateChanged;
-        IsLoggedIn = await AuthState.IsLoggedInAsync();
-
-        Console.WriteLine("OnInitializedAsync: IsLoggedIn ", IsLoggedIn);
+        isLoggedIn = await AuthState.IsLoggedInAsync();
+        AuthState.OnChange += StateChanged;
     }
 
-    private void HandleAuthStateChanged()
+    private async void StateChanged()
     {
-        InvokeAsync(async () =>
-        {
-            IsLoggedIn = await AuthState.IsLoggedInAsync();
-            StateHasChanged();
-            Console.WriteLine("HandleAuthStateChanged triggered");
-        });
+        isLoggedIn = await AuthState.IsLoggedInAsync();
+        StateHasChanged();
     }
 
-    private async Task LogIn()
-    {
-        await AuthState.LogInAsync();
-        IsLoggedIn = await AuthState.IsLoggedInAsync();
-
-        Console.WriteLine($"LogIn: IsLoggedIn = {IsLoggedIn}");
-    }
-
+   
     private async Task LogOut()
     {
         await AuthState.LogOutAsync();
-        // IsLoggedIn = await AuthState.IsLoggedInAsync();
-
-        // Console.WriteLine($"LogOut: IsLoggedIn = {IsLoggedIn}");
-        StateHasChanged();
+        NavigationManager.NavigateTo("/login");
     }
 
     public void Dispose()
     {
-        AuthState.OnChange -= HandleAuthStateChanged;
+        AuthState.OnChange -= StateChanged;
     }
 }

@@ -1,8 +1,7 @@
 ﻿@page "/login"
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
-@inject IJSRuntime JSRuntime
-@inject AuthStateService AuthState // Service to manage login state
+@inject AuthStateService AuthState
 
 <h3>Login</h3>
 
@@ -55,13 +54,15 @@ else if (errorMessage != null)
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var tokenResponse = System.Text.Json.JsonSerializer.Deserialize<TokenResponse>(jsonResponse);
                 var token = tokenResponse?.token;
+              
 
                 if (!string.IsNullOrEmpty(token))
                 {
                     // Store the token in localStorage
-                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", token);
+                    // await JSRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", token);
+                    await AuthState.LogInAsync(token);
                     successMessage = "Login successful!";
-                    // NavigationManager.NavigateTo("/");
+                    NavigationManager.NavigateTo("/parkings");
                 }
                 else
                 {

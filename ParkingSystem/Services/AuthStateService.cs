@@ -1,44 +1,40 @@
 ﻿using Blazored.LocalStorage;
+using Microsoft.JSInterop;
 using System.Threading.Tasks;
+using static ParkingSystem.Pages.Login;
 
 public class AuthStateService
 {
-    private readonly ILocalStorageService _localStorage;
+    private readonly IJSRuntime _jsRuntime;
 
     public event Action? OnChange;
 
-    public AuthStateService(ILocalStorageService localStorage)
+    public AuthStateService(IJSRuntime jsRuntime)
     {
-        _localStorage = localStorage;
+        _jsRuntime = jsRuntime;
     }
 
     public async Task<bool> IsLoggedInAsync()
     {
-        var token = await _localStorage.GetItemAsync<string>("authToken");
-        var isLoggedIn = !string.IsNullOrEmpty(token);
-        Console.WriteLine($"AuthStateService: IsLoggedIn = {isLoggedIn}");
-        return isLoggedIn;
+        var token = await _jsRuntime.InvokeAsync<string>("localStorage.getItem", "authToken");
+        return !string.IsNullOrEmpty(token);
     }
 
-
-    public async Task LogInAsync()
+    public async Task LogInAsync(string token)
     {
-        await _localStorage.SetItemAsync("authToken", true);
-        Console.WriteLine("AuthStateService: User logged in.");
+        Console.WriteLine($"Token: {token}");
+        await _jsRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", token);
         NotifyStateChanged();
     }
 
     public async Task LogOutAsync()
     {
-        await _localStorage.RemoveItemAsync("authToken");
-        Console.WriteLine("AuthStateService: User logged out.");
-        NotifyStateChanged();
+        await _jsRuntime.InvokeVoidAsync("localStorage.removeItem", "authToken");
+        NotifyStateChanged();  
     }
 
     private void NotifyStateChanged()
     {
-        Console.WriteLine("AuthState changed!");
-        OnChange?.Invoke();
+        OnChange?.Invoke();  
     }
-
 }
