@@ -42,12 +42,12 @@ else if (errorMessage != null)
 
     <div>
         <label for="password">Password</label>
-        <input id="password" @bind="employeeForm.Password" placeholder="Enter password" required />
+        <input id="password" type="password" @bind="employeeForm.Password" placeholder="Enter password" required />
     </div>
 
     <div>
         <label for="parkingId">Parking ID</label>
-        <input id="parkingId" @bind="parkingId" required />
+        <input id="parkingId" type="number" @bind="parkingId" required />
     </div>
 
     <button type="submit">Submit</button>

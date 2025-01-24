@@ -42,7 +42,7 @@ else if (errorMessage != null)
 
     <div>
         <label for="parkingId">Parking ID</label>
-        <input id="parkingId" @bind="employeeForm.parkingId" required />
+        <input id="parkingId" type="number" @bind="employeeForm.parkingId" required />
     </div>
 
     <button type="submit">Submit</button>
@@ -107,7 +107,19 @@ else if (errorMessage != null)
 
                 if (response != null)
                 {
-                    employeeForm = employee;
+                    // employeeForm = employee;
+
+                    // Split FullName into Name and Surname
+                    var fullNameParts = employee.FullName?.Split(' ', 2); // Split once into two parts
+                    employeeForm.Name = fullNameParts?.ElementAtOrDefault(0) ?? string.Empty; // First part as Name
+                    employeeForm.Surname = fullNameParts?.ElementAtOrDefault(1) ?? string.Empty; // Second part as Surname
+
+                    // Map the other properties
+                    employeeForm.Id = employee.Id;
+                    employeeForm.BirthDate = employee.BirthDate;
+                    employeeForm.parkingId = employee.parkingId;
+
+                    Console.WriteLine($"Loaded employee: {employeeForm.Name} {employeeForm.Surname}");
                     Console.WriteLine($"Loaded employee with parkingId: {employeeForm.parkingId}");
                 }
                 else
@@ -163,6 +175,7 @@ else if (errorMessage != null)
     public class EmployeeModel
     {
         public int Id { get; set; }
+        public string FullName { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateOnly BirthDate { get; set; }

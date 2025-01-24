@@ -21,13 +21,13 @@ else if (errorMessage != null)
 
 <form @onsubmit="SubmitForm">
     <div>
-        <label for="ticketExpiration">Ticket expiration</label>
-        <input id="ticketExpiration" type="datetime-local" @bind="parkingLeaveForm.TicketExpiration" required />
+        <label for="parkingEntryId">Parking entry ID</label>
+        <input id="parkingEntryId" type="number" @bind="parkingLeaveForm.ParkingEntryId" readonly />
     </div>
 
     <div>
-        <label for="parkingEntryId">Parking entry ID</label>
-        <input id="parkingEntryId" type="number" @bind="parkingLeaveForm.ParkingEntryId" readonly />
+        <label for="ticketExpiration">Ticket expiration</label>
+        <input id="ticketExpiration" type="datetime-local" @bind="parkingLeaveForm.TicketExpiration" required />
     </div>
 
     <button type="submit">Submit</button>

@@ -21,6 +21,11 @@ else if (errorMessage != null)
 
 <form @onsubmit="SubmitForm">
     <div>
+        <label for="parkingId">Parking ID</label>
+        <input id="parkingId" type="number" @bind="parkingEntryForm.ParkingId" readonly />
+    </div>
+
+    <div>
         <label for="registrationPlate">Registration Plate</label>
         <input id="registrationPlate" @bind="parkingEntryForm.RegistrationPlate" placeholder="Enter registration plate" required />
     </div>
@@ -28,11 +33,6 @@ else if (errorMessage != null)
     <div>
         <label for="ticketTakeover">Ticket Takeover</label>
         <input id="ticketTakeover" type="datetime-local" @bind="parkingEntryForm.TicketTakeover" required />
-    </div>
-
-    <div>
-        <label for="parkingId">Parking ID</label>
-        <input id="parkingId" type="number" @bind="parkingEntryForm.ParkingId" readonly />
     </div>
 
     <button type="submit">Submit</button>
