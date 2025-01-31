@@ -1,6 +1,7 @@
 ﻿@page "/deleteParkingLeave/{Id:int}"
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
+@inject AuthStateService AuthState
 
 <h3>Delete parking leave</h3>
 
@@ -37,6 +38,8 @@ else if (errorMessage != null)
 
     protected override void OnInitialized()
     {
+        CheckAuthorization();
+
         var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
         var query = uri.Query.TrimStart('?');
         var queryParameters = query.Split('&', StringSplitOptions.RemoveEmptyEntries);
@@ -56,6 +59,13 @@ else if (errorMessage != null)
         deletedLeave.Id = Id;
     }
 
+    private async Task CheckAuthorization()
+    {
+        if (!await AuthState.IsLoggedInAsync())
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
 
     private async Task SubmitForm()
     {

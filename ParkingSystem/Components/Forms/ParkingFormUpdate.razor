@@ -3,6 +3,7 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 @inject ApiService ApiService;
+@inject AuthStateService AuthState
 
 <h3>Update parking</h3>
 
@@ -64,6 +65,7 @@ else if (errorMessage != null)
 
     protected override async Task OnInitializedAsync()
     {
+       CheckAuthorization();
        await LoadParkingDetails();
     }
 
@@ -103,6 +105,14 @@ else if (errorMessage != null)
         catch (Exception ex)
         {
             errorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+    private async void CheckAuthorization()
+    {
+        if (!await AuthState.IsLoggedInAsync())
+        {
+            NavigationManager.NavigateTo("/");
         }
     }
 

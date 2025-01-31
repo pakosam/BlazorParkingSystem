@@ -3,6 +3,7 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 @inject ApiService ApiService;
+@inject AuthStateService AuthState
 
 <h3>Add Parking Entry</h3>
 
@@ -49,8 +50,18 @@ else if (errorMessage != null)
 
     protected override void OnInitialized()
     {
+        CheckAuthorization();
+
         // Set the ParkingId from the URL into the form model
         parkingEntryForm.ParkingId = ParkingId;
+    }
+
+    private async void CheckAuthorization()
+    {
+        if (!await AuthState.IsLoggedInAsync())
+        {
+            NavigationManager.NavigateTo("/");
+        }
     }
 
     private async Task SubmitForm()

@@ -3,6 +3,7 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 @inject ApiService ApiService;
+@inject AuthStateService AuthState
 
 <h3>Add employee</h3>
 
@@ -65,6 +66,8 @@ else if (errorMessage != null)
 
     protected override void OnInitialized()
     {
+        CheckAuthorization();
+
         var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
         var query = uri.Query.TrimStart('?');
         var queryParameters = query.Split('&', StringSplitOptions.RemoveEmptyEntries);
@@ -82,6 +85,14 @@ else if (errorMessage != null)
             }
         }
         employeeForm.parkingId = parkingId;
+    }
+
+    private async void CheckAuthorization()
+    {
+        if (!await AuthState.IsLoggedInAsync())
+        {
+            NavigationManager.NavigateTo("/");
+        }
     }
 
     private async Task SubmitForm()

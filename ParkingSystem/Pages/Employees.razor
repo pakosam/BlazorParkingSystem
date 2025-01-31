@@ -4,6 +4,7 @@
 @inject NavigationManager NavigationManager
 @inject ApiService ApiService;
 @inject IHttpClientFactory HttpClientFactory
+@inject AuthStateService AuthState
 
 <PageTitle>Employees</PageTitle>
 
@@ -64,6 +65,12 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        if (!await AuthState.IsLoggedInAsync())
+        {
+            NavigationManager.NavigateTo("/");
+            return;
+        }
+
         var response = await ApiService.MakeRequestAsync("https://localhost:7185/api/Employees", HttpMethod.Get);
         if (response.IsSuccessStatusCode)
         {

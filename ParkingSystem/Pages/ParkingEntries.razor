@@ -3,6 +3,7 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 @inject ApiService ApiService
+@inject AuthStateService AuthState
 
 <PageTitle>Parking entries</PageTitle>
 
@@ -62,6 +63,12 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        if (!await AuthState.IsLoggedInAsync())
+        {
+            NavigationManager.NavigateTo("/");
+            return;
+        }
+
         var response = await ApiService.MakeRequestAsync($"https://localhost:7185/api/ParkingEntries/{ParkingId}/entries", HttpMethod.Get);
         if (response.IsSuccessStatusCode)
         {

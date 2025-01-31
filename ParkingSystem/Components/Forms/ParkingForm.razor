@@ -3,6 +3,7 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 @inject ApiService ApiService;
+@inject AuthStateService AuthState
 
 <h3>Add parking</h3>
 
@@ -53,6 +54,19 @@ else if (errorMessage != null)
     private bool isSubmitting = false;
     private string? successMessage;
     private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CheckAuthorization();
+    }
+
+    private async Task CheckAuthorization()
+    {
+        if (!await AuthState.IsLoggedInAsync())
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
 
     private async Task SubmitForm()
     {
