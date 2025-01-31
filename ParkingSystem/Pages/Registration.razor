@@ -1,6 +1,7 @@
 ﻿@page "/registration"
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
+@inject AuthStateService AuthState
 
 <h3>Registration</h3>
 
@@ -52,6 +53,14 @@ else if (errorMessage != null)
     private bool isSubmitting = false;
     private string? successMessage;
     private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (await AuthState.IsLoggedInAsync())  
+        {
+            NavigationManager.NavigateTo("/parkings");  
+        }
+    }
 
     private async Task SubmitForm()
     {

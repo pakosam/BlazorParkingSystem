@@ -38,6 +38,14 @@ else if (errorMessage != null)
     private string? successMessage;
     private string? errorMessage;
 
+    protected override async Task OnInitializedAsync()
+    {
+        if (await AuthState.IsLoggedInAsync()) 
+        {
+            NavigationManager.NavigateTo("/parkings");  
+        }
+    }
+
     private async Task SubmitForm()
     {
         isSubmitting = true;
